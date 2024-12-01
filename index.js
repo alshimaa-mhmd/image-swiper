@@ -113,6 +113,7 @@ slider.addEventListener('touchstart', (e) => {
 slider.addEventListener('touchmove', (e) => {
     if (!isSwiping) return;
     currentX = e.touches[0].clientX; // Update the current touch position
+     e.preventDefault();
 });
 
 // When the user lifts their finger
@@ -122,10 +123,10 @@ slider.addEventListener('touchend', () => {
     isSwiping = false; // Reset swiping state
 
     // Determine swipe direction
-    if (deltaX > 50) {
+    if (deltaX > 180) {
         // Swipe right
         prevSlide(); // Call your existing previous slide function
-    } else if (deltaX < -50) {
+    } else if (deltaX < -180) {
         // Swipe left
         nextSlide(); // Call your existing next slide function
     }
