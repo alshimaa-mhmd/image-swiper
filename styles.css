@@ -178,6 +178,9 @@ button:hover{
 
 
   @media(max-width: 600px) {
+      body{
+          overflow-x : hidden;
+      }
     .swiper-wrapper{
         width: 200px;
     }
