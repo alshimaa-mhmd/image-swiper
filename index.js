@@ -125,10 +125,14 @@ slider.addEventListener('touchend', () => {
     // Determine swipe direction
     if (deltaX > 200) {
         // Swipe right
-        prevSlide(); // 
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide(); 
     } else if (deltaX < -200) {
         // Swipe left
-        nextSlide(); 
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide(); 
     }
 });
 
