@@ -123,12 +123,12 @@ slider.addEventListener('touchend', () => {
     isSwiping = false; // Reset swiping state
 
     // Determine swipe direction
-    if (deltaX > 180) {
+    if (deltaX > 200) {
         // Swipe right
-        prevSlide(); // Call your existing previous slide function
-    } else if (deltaX < -180) {
+        prevSlide(); // 
+    } else if (deltaX < -200) {
         // Swipe left
-        nextSlide(); // Call your existing next slide function
+        nextSlide(); 
     }
 });
 
