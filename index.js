@@ -126,13 +126,13 @@ slider.addEventListener('touchend', () => {
     if (deltaX > 200) {
         // Swipe right
         stopAutoSlide();
-        nextSlide();
-        startAutoSlide(); 
+        prevSlide();
+        startAutoSlide();
     } else if (deltaX < -200) {
         // Swipe left
-        stopAutoSlide();
-        prevSlide();
-        startAutoSlide(); 
+         stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
     }
 });
 
